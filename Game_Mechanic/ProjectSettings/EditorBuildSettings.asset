@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/Game_Mechanic.unity
     guid: 2f507497fdbd60b42a6800cd3cba2a85
+  - enabled: 1
+    path: Assets/Scene/Game_Over.unity
+    guid: 3dcbd84c1e6ba19468f2b57af2dc7fd5

@@ -17,7 +17,7 @@ public class MoveScript : MonoBehaviour {
     {
         rigidbody = GetComponent<Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
-        InvokeRepeating("IncreaseMaxSpeed", 30.0f, 30.0f);
+        InvokeRepeating("IncreaseMaxSpeed", 30.0f, 30.0f); // Increase speed every 30s
     }
 
     void FixedUpdate()
@@ -88,6 +88,8 @@ public class MoveScript : MonoBehaviour {
         rigidbody.velocity = newVelocity;
     }
 
+
+    // Add 5 to maxSpeed
     private void IncreaseMaxSpeed()
     {
         maxSpeed += 5;

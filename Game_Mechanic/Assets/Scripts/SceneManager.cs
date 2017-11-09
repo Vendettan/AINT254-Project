@@ -14,6 +14,11 @@ public class SceneManager : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void MenuButton()
+    {
+        Application.LoadLevel("Start_Menu");
+    }
 	
 	
 }

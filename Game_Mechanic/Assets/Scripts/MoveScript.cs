@@ -60,6 +60,7 @@ public class MoveScript : MonoBehaviour {
             if (rigidbody.position.z >= 0)
             {
                 rigidbody.position = new Vector3(rigidbody.position.x, rigidbody.position.y, rigidbody.position.z - 5);
+
             }
         }
     }    

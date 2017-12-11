@@ -31,7 +31,7 @@ public class MoveScript : MonoBehaviour {
         rigidbody.AddForce(transform.right * acceleration);
 
         // Jump with W
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             if (IsGrounded())
             {

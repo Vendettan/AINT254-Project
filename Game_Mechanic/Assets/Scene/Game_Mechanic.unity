@@ -86,7 +86,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 18d37bf1216f05440b375c4a529b2ac7,
+  m_LightingDataAsset: {fileID: 112000002, guid: e3b3c7255d33b91498f057fcd7d6dc14,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -1459,7 +1459,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 701790021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: -31.21, z: 0}
+  m_LocalPosition: {x: -16.031, y: -32.745, z: 0.0010271}
   m_LocalScale: {x: 11.816962, y: 66.03154, z: 15.252288}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2907,7 +2907,7 @@ Transform:
   - {fileID: 1716250945}
   - {fileID: 395971930}
   m_Father: {fileID: 1959161501}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1335045552
 GameObject:
@@ -3846,9 +3846,9 @@ Transform:
   m_LocalPosition: {x: -1.8264065, y: -17.158695, z: -19.55775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1344452700}
   - {fileID: 1334092730}
   - {fileID: 2063780067}
+  - {fileID: 1344452700}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3884,7 +3884,7 @@ Transform:
   - {fileID: 830970215}
   - {fileID: 556482734}
   m_Father: {fileID: 1959161501}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076680831
 GameObject:

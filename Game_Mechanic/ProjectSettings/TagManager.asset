@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Death
   - Track
+  - Win
   - Jim
+  - DeathZone
   layers:
   - Default
   - TransparentFX

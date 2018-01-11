@@ -7,7 +7,7 @@ public class MoveScript : MonoBehaviour {
     private Rigidbody rigidbody;
     private float acceleration = 10.0f;
     private float maxSpeed = 20.0f;
-    private float jumpPower = 600.0f;
+    private float jumpPower = 13.0f;
     private bool isGrounded;
     private float distToGround;  
     private StateScript stateScript;
@@ -31,7 +31,7 @@ public class MoveScript : MonoBehaviour {
     }
 
     /// <summary>
-    /// DYNAMIC WALL HALP :: Use a raycast to the left along with a compareTag for Track 
+    /// DYNAMIC WALL HELP :: Use a raycast to the left along with a compareTag for Track 
     /// to stop user moving into wall, have only back wall go up and front wall go down.
     /// </summary>
 
@@ -48,13 +48,12 @@ public class MoveScript : MonoBehaviour {
             rigidbody.isKinematic = true;
         }
 
-        // Jump with W
+        // Jump with W, Up or Space
         if (Input.GetKeyDown(KeyCode.W) && !isDead || Input.GetKeyDown(KeyCode.Space) && !isDead || Input.GetKeyDown(KeyCode.UpArrow) && !isDead)
         {
             if (IsGrounded())
             {
-                Debug.Log("spaceTest");
-                rigidbody.AddForce(transform.up * Input.GetAxis("Vertical") * jumpPower, ForceMode.Impulse);
+                rigidbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
                 
                 isGrounded = false;
             }
@@ -81,16 +80,7 @@ public class MoveScript : MonoBehaviour {
                 rigidbody.position = new Vector3(rigidbody.position.x, rigidbody.position.y, rigidbody.position.z - 5);
 
             }
-        }
-
-        //// Slam with S
-        //if (Input.GetKeyDown(KeyCode.S) && !isDead)
-        //{
-        //    if (!IsGrounded())
-        //    {
-        //        rigidbody.AddForce(transform.up * -35, ForceMode.Impulse);
-        //    }
-        //}
+        }     
     }    
 
     // Check if grounded
@@ -118,7 +108,7 @@ public class MoveScript : MonoBehaviour {
     }
 
 
-    // Add 5 to maxSpeed
+    // Add 0.1 to maxSpeed
     private void IncreaseMaxSpeed()
     {
         maxSpeed += 0.1f;

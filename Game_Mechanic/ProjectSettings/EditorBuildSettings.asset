@@ -7,9 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scene/Start_Menu.unity
+    guid: 6da4015b80a801a4e8aa1ff865cc0296
   - enabled: 1
     path: Assets/Scene/Game_Mechanic.unity
+    guid: 2f507497fdbd60b42a6800cd3cba2a85
   - enabled: 1
     path: Assets/Scene/Game_Over.unity
+    guid: 3dcbd84c1e6ba19468f2b57af2dc7fd5
   - enabled: 1
     path: Assets/Scene/Level_Select.unity
+    guid: f7f531058fc8cbb4ba2573ca5b8566b2
+  - enabled: 1
+    path: Assets/Scene/Game_Mechanic_Lvl_2.unity
+    guid: cbebe9365a89ebc43bbf87cf67bf1cb4

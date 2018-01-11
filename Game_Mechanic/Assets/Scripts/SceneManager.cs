@@ -7,7 +7,18 @@ public class SceneManager : MonoBehaviour
 {
     private StateScript stateScript;
 
-	public void PlayButton()
+    [SerializeField]
+    private Canvas pauseCanvas;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
+    }
+
+    public void PlayButton()
     {
         Application.LoadLevel("Level_Select");
     }
@@ -24,11 +35,48 @@ public class SceneManager : MonoBehaviour
 
     public void LevelOnePlayButton()
     {
-        Application.LoadLevel("Game_Mechanic");
+        Application.LoadLevel("Game_Mechanic_Lvl_2");
     }
 	
 	public void LevelOneRetryButton()
     {
+        Application.LoadLevel("Game_Mechanic_Lvl_2");
+    }
+
+    public void LevelTwoPlayButton()
+    {
         Application.LoadLevel("Game_Mechanic");
     }
+
+    public void LevelTwoRetryButton()
+    {
+        Application.LoadLevel("Game_Mechanic");
+    }
+
+    public void ContinueButton()
+    {
+        Time.timeScale = 1;
+        pauseCanvas.gameObject.SetActive(false);
+    }
+
+    public void PauseGame()
+    {
+        if (pauseCanvas.gameObject.activeInHierarchy == false)
+        {
+            Time.timeScale = 0;
+            pauseCanvas.gameObject.SetActive(true);            
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseCanvas.gameObject.SetActive(false);
+        }
+    }
+
+    public void MainMenuButton()
+    {
+        Time.timeScale = 1;
+        MenuButton();
+    }
+    
 }

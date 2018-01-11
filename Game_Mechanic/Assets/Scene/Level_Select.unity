@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49264705, g: 0.49264705, b: 0.49264705, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1720803473}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &339354703
@@ -580,7 +580,7 @@ RectTransform:
   m_GameObject: {fileID: 700413614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5488336, y: 1.5488335, z: 1.5488335}
   m_Children:
   - {fileID: 88377444}
   m_Father: {fileID: 1555887458}
@@ -588,7 +588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 81.100006}
+  m_AnchoredPosition: {x: -0.6860399, y: 124.779976}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700413616
@@ -610,9 +610,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.29411763, g: 0.29411763, b: 0.29411763, a: 1}
-    m_HighlightedColor: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
-    m_PressedColor: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
+    m_NormalColor: {r: 0.85490197, g: 0.85490197, b: 0.85490197, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.5372549, b: 0.5372549, a: 1}
+    m_PressedColor: {r: 1, g: 0.42745098, b: 0.42745098, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -629,7 +629,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 700413617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 850319939}
+        m_MethodName: LevelTwoPlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &700413617
@@ -691,7 +702,7 @@ RectTransform:
   m_GameObject: {fileID: 746289312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5488336, y: 1.5488335, z: 1.5488335}
   m_Children:
   - {fileID: 324610275}
   m_Father: {fileID: 1555887458}
@@ -699,7 +710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 134.1, y: 81.1}
+  m_AnchoredPosition: {x: 207.01, y: 124.779976}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746289314
@@ -803,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb72db2363b53043a0fe645e776479d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
 --- !u!4 &850319940
 Transform:
   m_ObjectHideFlags: 0
@@ -1079,7 +1091,7 @@ RectTransform:
   m_GameObject: {fileID: 1720803473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5488336, y: 1.5488335, z: 1.5488335}
   m_Children:
   - {fileID: 1161145862}
   m_Father: {fileID: 1555887458}
@@ -1087,7 +1099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.50135684}
   m_AnchorMax: {x: 0.5, y: 0.50135684}
-  m_AnchoredPosition: {x: -131.6, y: 80.100006}
+  m_AnchoredPosition: {x: -204.51, y: 124}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720803475

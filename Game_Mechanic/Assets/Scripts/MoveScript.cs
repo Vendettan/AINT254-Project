@@ -5,10 +5,9 @@ using UnityEngine;
 public class MoveScript : MonoBehaviour {
 
     private Rigidbody rigidbody;
-    private float acceleration = 6.0f;
+    private float acceleration = 10.0f;
     private float maxSpeed = 20.0f;
     private float jumpPower = 600.0f;
-    private float sideJumpPower = 400.0f;
     private bool isGrounded;
     private float distToGround;  
     private StateScript stateScript;
@@ -46,14 +45,15 @@ public class MoveScript : MonoBehaviour {
         }
         else
         {
-            maxSpeed = 10.0f;
+            rigidbody.isKinematic = true;
         }
 
         // Jump with W
-        if (Input.GetKeyDown(KeyCode.W) && !isDead || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W) && !isDead || Input.GetKeyDown(KeyCode.Space) && !isDead || Input.GetKeyDown(KeyCode.UpArrow) && !isDead)
         {
             if (IsGrounded())
             {
+                Debug.Log("spaceTest");
                 rigidbody.AddForce(transform.up * Input.GetAxis("Vertical") * jumpPower, ForceMode.Impulse);
                 
                 isGrounded = false;
@@ -65,7 +65,7 @@ public class MoveScript : MonoBehaviour {
         }
 
         // Move left (Positive)
-        if (Input.GetKeyDown(KeyCode.A) && !isDead)
+        if (Input.GetKeyDown(KeyCode.A) && !isDead || Input.GetKeyDown(KeyCode.LeftArrow) && !isDead)
         {
             if (rigidbody.position.z <= 0)
             {
@@ -74,7 +74,7 @@ public class MoveScript : MonoBehaviour {
         }
 
         // Move right (Negative)
-        if (Input.GetKeyDown(KeyCode.D) && !isDead)
+        if (Input.GetKeyDown(KeyCode.D) && !isDead || Input.GetKeyDown(KeyCode.RightArrow) && !isDead)
         {
             if (rigidbody.position.z >= 0)
             {
@@ -83,14 +83,14 @@ public class MoveScript : MonoBehaviour {
             }
         }
 
-        // Slam with S
-        if (Input.GetKeyDown(KeyCode.S) && !isDead)
-        {
-            if (!IsGrounded())
-            {
-                rigidbody.AddForce(transform.up * -35, ForceMode.Impulse);
-            }
-        }
+        //// Slam with S
+        //if (Input.GetKeyDown(KeyCode.S) && !isDead)
+        //{
+        //    if (!IsGrounded())
+        //    {
+        //        rigidbody.AddForce(transform.up * -35, ForceMode.Impulse);
+        //    }
+        //}
     }    
 
     // Check if grounded

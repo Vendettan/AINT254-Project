@@ -697,6 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb72db2363b53043a0fe645e776479d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
 --- !u!1 &981662363
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 424318533}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &1316711719

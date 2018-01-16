@@ -53,6 +53,16 @@ public class SceneManager : MonoBehaviour
         Application.LoadLevel("Game_Mechanic");
     }
 
+    public void LevelThreePlayButton()
+    {
+        Application.LoadLevel("Game_Mechanic_Lvl_3");
+    }
+
+    public void LevelThreeRetryButton()
+    {
+        Application.LoadLevel("Game_Mechanic_Lvl_3");
+    }
+
     public void ContinueButton()
     {
         Time.timeScale = 1;

@@ -9,9 +9,15 @@ public class MoveScript : MonoBehaviour {
     private float maxSpeed = 20.0f;
     private float jumpPower = 13.0f;
     private bool isGrounded;
-    private float distToGround;  
+    private float distToGround;
     private StateScript stateScript;
     private bool isDead;
+
+    [SerializeField]
+    private AudioSource switchTrack;
+    [SerializeField]
+    private AudioSource jumpSound;
+
 
     void Start ()
     {
@@ -37,7 +43,7 @@ public class MoveScript : MonoBehaviour {
 
 
     void Update ()
-    {
+    {        
         if (!isDead)
         {
             // Right force constant
@@ -54,13 +60,14 @@ public class MoveScript : MonoBehaviour {
             if (IsGrounded())
             {
                 rigidbody.AddForce(transform.up * jumpPower, ForceMode.Impulse);
+                jumpSound.Play();
                 
                 isGrounded = false;
             }
         }
         else
         {
-            rigidbody.AddForce(transform.up * -4);
+            rigidbody.AddForce(transform.up * -8);
         }
 
         // Move left (Positive)
@@ -69,6 +76,8 @@ public class MoveScript : MonoBehaviour {
             if (rigidbody.position.z <= 0)
             {
                 rigidbody.position = new Vector3(rigidbody.position.x, rigidbody.position.y, rigidbody.position.z + 5);
+                switchTrack.Play();
+                Debug.Log("Move Left");                               
             }
         }
 
@@ -78,7 +87,8 @@ public class MoveScript : MonoBehaviour {
             if (rigidbody.position.z >= 0)
             {
                 rigidbody.position = new Vector3(rigidbody.position.x, rigidbody.position.y, rigidbody.position.z - 5);
-
+                switchTrack.Play();
+                Debug.Log("Move Right");
             }
         }     
     }    
@@ -88,7 +98,7 @@ public class MoveScript : MonoBehaviour {
     {
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
-
+    
     private void LateUpdate()
     {
         // Limit speed

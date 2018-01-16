@@ -5,19 +5,26 @@ using UnityEngine;
 public class StateScript : MonoBehaviour
 {
     public Transform levelComplete;
-    public Transform retryCanvas; 
+    public Transform retryCanvas;
+
+    [SerializeField]
+    private AudioSource winSound;
+    [SerializeField]
+    private AudioSource deathSound;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Death"))
         {
             ShowRetry();
+            deathSound.Play();
         }
 
         if (other.CompareTag("Win"))
         {
             ShowComplete();
-            Invoke("playerWin", 2.0f);
+            winSound.Play();
+            Invoke("playerWin", 2.5f);
         }
 
         if (other.CompareTag("DeathZone"))
